@@ -50,10 +50,16 @@ Route::get('/', function () {
 
 //    \App\Post::destroy(4,5,7);
 
-    $allPosts=\App\Post::all();
-    dd($allPosts);
-    $featuredPosts=\App\Post::where('is_feature',1)->get();
-    dd($featuredPosts);
+//    $allPosts=\App\Post::all();
+//    dd($allPosts);
+//    $featuredPosts=\App\Post::where('is_feature',1)->get();
+//    dd($featuredPosts);
+
+    $sixthPost=\App\Post::find(6);
+    dd($sixthPost);
+    $lastPost=\App\Post::orderBy('id','DESC')->first();
+    dd($lastPost);
+
 
 
 });
