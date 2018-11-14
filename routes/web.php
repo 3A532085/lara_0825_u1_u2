@@ -18,10 +18,10 @@ Route::get('/', function () {
 //        'content'=>'test content',
 //    ]);
 
-    $post = new\App\Post();
-    $post ->title ='test title';
-    $post ->content ='test content';
-    $post ->save();
+//    $post = new\App\Post();
+//    $post ->title ='test title';
+//    $post ->content ='test content';
+//    $post ->save();
 
 //  $posts=\App\Post::all();
 //  dd($posts);
@@ -32,12 +32,16 @@ Route::get('/', function () {
 //  $posts=\App\Post::where('id','<',10)->orderBy('id','DESC')->get();
 //  dd($posts);
 
-    $post=\App\Post::find(1);
-    $post->update([
-        'title'=>'updated title',
-        'content'=>'updated content',
-    ]);
+//    $post=\App\Post::find(1);
+//    $post->update([
+//    'title'=>'updated title',
+//    'content'=>'updated content',
+//    ]);
 
+    $post=\App\Post::find(1);
+    $post->title='saved title';
+    $post->content='saved content';
+    $post->save();
 
 
 });
