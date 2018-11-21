@@ -55,11 +55,15 @@ Route::get('/', function () {
 //    $featuredPosts=\App\Post::where('is_feature',1)->get();
 //    dd($featuredPosts);
 
-    $sixthPost=\App\Post::find(6);
-    dd($sixthPost);
-    $lastPost=\App\Post::orderBy('id','DESC')->first();
-    dd($lastPost);
+//    $sixthPost=\App\Post::find(6);
+//    dd($sixthPost);
+//    $lastPost=\App\Post::orderBy('id','DESC')->first();
+//    dd($lastPost);
 
+    $post=\App\Post::find(8);
+    foreach($post->comments as $comment){
+        echo $comment->title.'<br>';
+    }
 
 
 });
